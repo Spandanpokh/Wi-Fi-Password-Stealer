@@ -1,0 +1,1 @@
+netsh wlan show profiles | Select-String -Pattern "All User Profile" | ForEach-Object {$_ -match ": (.+)"; $name=$Matches[1];(netsh wlan show profile name="$name" key=clear) | Select-String -Pattern "Key Content"; if($Matches){Write-Output "Wi-Fi Profile: $name"; Write-Output "Password: $($Matches[1])"; Write-Output "--------------------------"}}
